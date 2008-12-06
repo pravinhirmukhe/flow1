@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>WordPress &rsaquo; ReadMe</title>	
+	<link rel="stylesheet" href="wp-admin/css/install.css" type="text/css" />
+</head>
+<body>
+<h1 id="logo" style="text-align: center">
+	<img alt="WordPress" src="wp-admin/images/wordpress-logo.png" />
+	<br /> Version 2.7
+</h1>
+<p style="text-align: center">真正的个人信息发布平台</p>
+
+<h1>首先要说的话</h1>
+<p>欢迎您。对我而言，WordPress 是个特殊的项目。每个开发者和贡献者为其添加不容的功能，一起完成了这美妙的工作。能成为他们中的一员，我深感自豪。我们已经为之努力数千小时，并还要继续努力，来让它变得更好。感谢您让它成为您生活的一部分。</p>
+<p style="text-align: right;">&#8212; Matt Mullenweg</p>
+
+<h1>安装：著名的5分钟安装办法</h1>
+<ol>
+	<li>解压缩文件到一个空目录。</li>
+	<li>使用文本编辑器（比如 WordPad）打开 <code>wp-config-sample.php</code> 文件，填写您的数据库连接细节。</li>
+	<li>将文件保存为 <code>wp-config.php</code>。</li>
+	<li>全部上传。</li>
+	<li>在浏览器中打开 <span class="file"><a href="wp-admin/install.php">/wp-admin/install.php</a></span> 。这将为您的 Blog 创建数据表。如果发生错误，请检查您的 <span class="file">wp-config.php</span> 文件，然后重试。如果再次失败，请前往 <a href="http://wordpress.org/support/">支持论坛</a> 寻求帮助，并注意带上您能收集到的信息。</li>
+	<li><strong>注意保存给您的密码。</strong></li>
+	<li>安装脚本将送您到 <a href="wp-login.php">登录页面</a>。使用用户名 <code>admin</code> 和安装过程中生成的密码登陆。您可以点击“资料”来更改密码。</li>
+</ol>
+
+<h1>升级</h1>
+<p>在升级之前，请确认已经备份所有您修改过的文件，比如说 <code>index.php</code>。</p>
+<h2>升级任意版本到 WordPress 2.7：</h2>
+<ol>
+	<li>备份您修改过的文件，删除旧的 WP 文件</li>
+	<li>上传新的文件。</li>
+	<li>在浏览器中打开 <span class="file"><a href="wp-admin/upgrade.php">/wp-admin/upgrade.php</a>。</span></li>
+	<li>想要下一步？没了！</li>
+</ol>
+<h2>模版改变</h2>
+<p>如果您使用的自定义的模版，您可能需要对模版做些修改。如果您试用的是 1.2 或者更早的版本，<a href="http://codex.wordpress.org/Upgrade_1.2_to_1.5">我们已经为您准备了一份特别指南</a>。</p>
+
+<h1>在线资源</h1>
+<p>如果您遇到本文档内没有提到的问题，可以利用好 WordPress 的在线资源：</p>
+<dl>
+	<dt><a href="http://codex.wordpress.org/">The WordPress Codex </a></dt>
+		<dd>Codex 是 WordPress 的百科全书，它是 WordPress 最全面的信息源。</dd>
+	<dt><a href="http://wordpress.org/development/">The Development Blog</a></dt>
+		<dd>您能够在这里获得 WordPress 的最新消息和新闻。您可以搜藏起来经常查看。</dd>
+	<dt><a href="http://planet.wordpress.org/">WordPress Planet </a></dt>
+		<dd>WordPress Planet 是一个新闻聚合器，收集来自全世界的 WordPress 的 Blog 的新闻。</dd>
+	<dt><a href="http://wordpress.org/support/">WordPress 支持论坛</a></dt>
+		<dd>如果您找遍了每个角落，仍然没有找到答案，非常活跃的支持论坛可以给您帮助。要让他们帮助您，请使用描述性的主题，并尽可能描述您所知道的问题细节。</dd>
+	<dt><a href="http://codex.wordpress.org/IRC">WordPress IRC 频道</a></dt>
+		<dd>最后，有一个在线聊天频道，很多使用 WordPress 的用户探讨各种问题。您可以通过上面的 wiki 页来找到正确的用法。(<a href="irc://irc.freenode.net/wordpress">irc.freenode.net #wordpress</a>)</dd>
+</dl>
+
+<h1>System Recommendations</h1>
+<ul>
+	<li>PHP <strong>4.3</strong> 或更高版本。</li>
+	<li>MySQL <strong>4.0</strong> 或更高版本。</li>
+	<li>... 和一个指向 <a href="http://wordpress.org/">http://wordpress.org</a> 的链接放在您的网站上。</li>
+</ul>
+<p>WordPress 是 <a href="http://cafelog.com/">b2/caf&eacute;log</a> 官方后续版本，后者是由 Michel V 所创建。这个工作现在由 <a href="http://wordpress.org/about/">WordPress 开发者</a> 继续。如果您想要支持 WordPress，请考虑 <a href="http://wordpress.org/donate/">捐赠</a>。</p>
+
+<h1>从其他系统升级</h1>
+<p>WordPress 可以<a href="http://codex.wordpress.org/Importing_Content">从很多别的系统导入数据</a>。首先，您需要按照上面的办法安装 WordPress 。</p>
+
+<h1>XML-RPC 和 Atom 接口</h1>
+<p>您可以通过类似于 <a href="http://windowslivewriter.spaces.live.com/">Windows Live Writer</a>, <a href="http://ecto.kung-foo.tv/">Ecto</a>, <a href="http://bloggar.com/">Bloggar</a>, <a href="http://radio.userland.com">Radio Userland</a> (这意味着您可以使用 Radio 的 email-to-blog 功能), <a href="http://www.newzcrawler.com/">NewzCrawler</a>, 和其他支持支持 Blogging API 的工具发表文章到您的 Blog！:) 您可以 <a href="http://codex.wordpress.org/XML-RPC_Support">在 CodeX 上的 XML-RPC支持</a> 来获取更多信息。</p>
+
+<h1>通过 Email 发表文章</h1>
+<p>您可以通过 email 客户端发表文章！要使用此功能，可以通过“撰写”选项页面，填写您的秘密 POP3 帐号。然后您需要设置 <code>wp-mail.php</code> 来定期执行检查这个信箱。您可以通过计划任务来实现；如果您的主机不支持，也可以尝试使用网站监视服务，让他们来检查您的 <code>wp-mail.php</code> 网址。</p>
+<p>发表文章还是很容易地：任何发送到指定地址的 email 都会被发表，邮件的标题用作文章的题目。该邮件地址务必保密。如果发表成功，脚本程序会 <em>删除</em> 这些 emails。</p>
+
+<h1>用户身份</h1>
+<p>我们取消了用户级别，以在 2.0 版本中包含更灵活的身份系统。您可以 <a href="http://codex.wordpress.org/Roles_and_Capabilities">在 CodeX 上阅读更多关于身份和权限的信息</a>。</p>
+
+<h1>最后注意事项</h1>
+<ul>
+	<li>如果您有任何建议、想法、评论，或您（哇！）发现一个 bug，请加入我们的 <a href="http://wordpress.org/support/">支持论坛</a>。</li>
+	<li>WordPress 现在拥有健壮的 API，扩展代码更为容易。如果您是一个开发者，对这个感兴趣的话，可以查看 <a href="http://codex.wordpress.org/Plugin_API">CodeX 上的插件文档</a>。大多数情况下，您都无需修改核心代码。</li>
+</ul>
+
+<h1>分享您的爱</h1>
+<p>WordPress 没有百万美元来的市场营销，也没有明星的资助，但我们却有更好的 -- 您。如果您喜欢 WordPress，请告诉您的朋友，帮助那些不懂技术的人安装，或者在媒体上表达您对我们的喜爱。</p>
+
+<h1>版权</h1>
+<p>WordPress 基于 <abbr title="GNU Public License">GPL 通用许可协议发布</abbr> （参考 <a href="license.txt">license.txt</a>）。</p>
+
+<h1>中文版</h1>
+<p>此 WordPress 中文版本由 <a href="http://wpchina.org/">Wordpress中文站</a> 提供中文翻译，作者 Jiang &lt;jiangzhanyong@gmail.com&gt;。Wordpress中文站，提供提供 WordPress 插件、主题、程序及相关的中文资讯。<strong>欢迎光临 <a href="http://wpchina.org/">Wordpress中文站</a> </strong>。</p>
+</body>
+</html>
