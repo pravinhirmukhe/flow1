@@ -79,7 +79,7 @@ define ('WPLANG', 'zh_CN');
  *
  * @added by WPChina.org
  */
-define('WP_POST_REVISIONS', '-1');
+define('WP_POST_REVISIONS', '0');
 
 /* 到此为止，以下禁止修改！祝你写博愉快。 */
 
