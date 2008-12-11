@@ -5,15 +5,15 @@
 <?php while (have_posts()) : the_post(); ?>
 
 <!-- BEGIN #photo -->
-<h2 class="photo-title"><span><?php the_title(); ?></span></h2>
+<!--     <h2 class="photo-title"><span><?php the_title(); ?></span></h2>     -->
 <div id="photo">
-    <div id="photo-inner">
+    <div id="photo-inner"><br/><br/>
     <?php the_content(); ?>
     <?php the_tags('<hr />TAGS: ', ', ', ''); ?>
-    </div>
+    <br/></div>
 </div>
 <!-- END #photo -->
-
+<br/>
 <!-- BEGIN photo meta -->
 <div id="photo-meta">
     <div id="photo-meta-inner">
@@ -29,7 +29,7 @@
 </div>
 <!-- END photo meta -->
 
-<!-- BEGIN navigate -->
+<!-- BEGIN navigate 
 <div id="navigate">
     <div id="navigate-inner" class="clearfix">
         <?php $wp_query->is_single = true; ?>
@@ -37,7 +37,7 @@
         <span class="next"><?php next_post( '%', 'Next', '' ) ?></span>
     </div>
 </div>
-<!-- END navigate -->
+	 END navigate -->
 <?php endwhile; ?>
 <?php endif; ?>
 
