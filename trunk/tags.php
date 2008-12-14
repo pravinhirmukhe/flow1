@@ -61,8 +61,6 @@ DBS::end();
 ?>
 
 
-</div><!--end pages tagslist-->
-<div class="footer">
-© Copyright FOTO!  ·  All rights reserved  ·  
-</div><span style="display: none;">
-</body></html>
+</div>
+<?php
+require_once './inc/html/foot.html';?>
