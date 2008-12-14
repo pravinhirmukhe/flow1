@@ -86,7 +86,5 @@ try{
  <a href="" title="Comments "></a>     	 
 </div>   
 </div>
-    
-<div class="footer">
-© Copyright FOTO!  ·  All rights reserved  ·  
-</body></html>
+<?php
+require_once './inc/html/foot.html';?>
