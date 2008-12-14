@@ -15,9 +15,9 @@
 <!-- /all in one seo pack -->  
 </head>
 <?php
-require_once './inc/php/object.php';
-require_once './inc/php/error.php';
-require_once './inc/php/dbs.php';
+require_once 'object.php';
+require_once 'error.php';
+require_once 'dbs.php';
 try{
 	$db = DBS::init();
 	$home = "http://foto.tfbj.cc";

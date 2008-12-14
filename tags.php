@@ -15,8 +15,8 @@
 </div>
 <div class="pages tagslist">
 <?php
-require_once './inc/php/object.php';
-require_once './inc/php/dbs.php';
+require_once 'object.php';
+require_once 'dbs.php';
 $db = DBS::init();
 //-------------------------
 
