@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head> 
@@ -14,27 +15,44 @@
 <!-- /all in one seo pack -->  
 </head>
 <?php
-require_once './inc/php/object.php';
-require_once './inc/php/error.php';
-require_once './inc/php/dbs.php';
-ini_set('display_errors',1);
+require_once 'object.php';
+require_once 'error.php';
+require_once 'dbs.php';
 try{
 	$db = DBS::init();
 	$home = "http://foto.tfbj.cc";
+	$url="http://stat001.tfbj.cc/**/";
 
 	$glry = "ft_ngg_gallery";
 	$pic  = "ft_ngg_pictures";
 	$tags = "ft_terms";
 	$p2t  = "ft_term_relationships";
 	
-	$url="http://stat001.tfbj.cc/**/";
-	$sql="SELECT gry.path as path, tags.name as tag, pic.pid as id, pic.alttext as alt, pic.filename , tags.term_id as tid
+	$pid = isset($_GET['pid'])?$_GET['pid']:0;
+	$tid = isset($_GET['tag'])?$_GET['tag']:0;
+	$num = isset($_GET['num'])?$_GET['num']:0;
+	$mext= $num+1;
+
+	if($pid<=0){
+		header("location: index.php");
+	}
+	
+	if($pid>0){
+		$begin = $pid-1;
+		$sql="SELECT gry.path as path, tags.name as tag, pic.pid as id, pic.alttext as alt, pic.filename , tags.term_id as tid
 	      FROM  $glry as gry, $pic as pic, $tags as tags, $p2t as p2t 
-		  where pic.galleryid=gry.gid and pic.pid=p2t.object_id and p2t.term_taxonomy_id=tags.term_id
-		  order by pic.pid desc limit 1 ";
+		  where pic.galleryid=gry.gid and pic.pid=p2t.object_id and p2t.term_taxonomy_id=tags.term_id  limit {$begin},1  ";
+	}else{
+		$begin = $num-1;
+		$sql="SELECT gry.path as path, tags.name as tag, pic.pid as id, pic.alttext as alt, pic.filename , tags.term_id as tid
+	      FROM  $glry as gry, $pic as pic, $tags as tags, $p2t as p2t 
+		  where pic.galleryid=gry.gid and pic.pid=p2t.object_id and p2t.term_taxonomy_id=tags.term_id and tags.term_id={$tid} 
+		  order by pic.pid desc 
+		  limit {$begin} , 1";		
+	}	
 	$rt=$db->query($sql);
 	if(!$rt){
-		throw new error("error in query database");
+		header("locaton: index.php");
 	}else{
 		$obj= $rt->fetch_object();
 
@@ -44,6 +62,7 @@ try{
 			throw new error("error in dataset");
 			}
 	}
+
 	$tag=$obj->tag;
 	$tid = $obj->tid;
 	$start = strrpos($obj->path, '/');
@@ -52,7 +71,10 @@ try{
 	$next  = $obj->id-1;
 	$cimg= str_replace('**', $dir, $url).$obj->filename;  # current imgae
 	$previmg= "picture.php?pid={$next}";			  # next image
-	$tagimg = "picture.php?tag={$tid}&num=1";	  # image of image 
+	$tagimg = "picture.php?tag={$tid}&num={$mext}";	  # image of image 
+
+
+
 	
 	DBS::end();
 }catch(error $e){
@@ -74,10 +96,14 @@ try{
  <!-- begin post -->    
     
 
+
+
+<div id="guanggo_top">
+</div>
 <div class="entry">  
 
 <!-- echo the main pictures -->	
-<a href="<?php echo $previmg; ?>" title="Previous"><img class="alignnone" title="<?php echo $ititle; ?>" src="<?php echo $cimg; ?>" alt="<?php echo $alt; ?>"></a>
+<a href="<?php echo $previmg;?>" title="Previous"><img class="alignnone" title="<?php echo $ititle; ?>" src="<?php echo $cimg; ?>" alt="<?php echo $alt; ?>"></a>
 
 <!-- echo the appending information -->
 <div class="posted">  
@@ -85,6 +111,9 @@ try{
  <a href="<?php echo $tagimg; ?>" title="<?php echo $tag; ?>"> <?php echo $tag; ?></a> 
  <a href="" title="Comments "></a>     	 
 </div>   
+
+<div id="guanggo_button">
+
 </div>
     
 <div class="footer">

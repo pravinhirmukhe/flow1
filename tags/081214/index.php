@@ -14,9 +14,9 @@
 <!-- /all in one seo pack -->  
 </head>
 <?php
-require_once './inc/php/object.php';
-require_once './inc/php/error.php';
-require_once './inc/php/dbs.php';
+require_once 'object.php';
+require_once 'error.php';
+require_once 'dbs.php';
 ini_set('display_errors',1);
 try{
 	$db = DBS::init();
