@@ -1,0 +1,75 @@
+[13-Dec-2008 21:40:43] PHP Parse error:  syntax error, unexpected T_ECHO in /home/tfbjcc/public_html/foto/tags.php on line 30
+[13-Dec-2008 21:41:53] PHP Parse error:  syntax error, unexpected T_ECHO in /home/tfbjcc/public_html/foto/tags.php on line 30
+[13-Dec-2008 21:41:55] PHP Parse error:  syntax error, unexpected T_ECHO in /home/tfbjcc/public_html/foto/tags.php on line 30
+[13-Dec-2008 21:43:15] PHP Parse error:  syntax error, unexpected T_ECHO in /home/tfbjcc/public_html/foto/tags.php on line 30
+[13-Dec-2008 21:43:45] PHP Fatal error:  Class 'Object' not found in /home/tfbjcc/public_html/foto/dbs.php on line 3
+[13-Dec-2008 21:45:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:45:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:45:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:45:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:45:04] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:47:01] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'foto'@'localhost' (using password: YES) in /home/tfbjcc/public_html/foto/dbs.php on line 23
+[13-Dec-2008 21:47:01] PHP Warning:  mysqli::ping() [<a href='mysqli.ping'>mysqli.ping</a>]: Couldn't fetch mysqli in /home/tfbjcc/public_html/foto/dbs.php on line 24
+[13-Dec-2008 21:47:01] PHP Fatal error:  Using $this when not in object context in /home/tfbjcc/public_html/foto/dbs.php on line 25
+[13-Dec-2008 21:47:46] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:47:46] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:47:46] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:47:46] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:47:46] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:49:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:49:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:49:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:49:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:49:04] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:52:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:52:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:52:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:52:04] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:52:04] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:52:12] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:52:12] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 26
+[13-Dec-2008 21:52:12] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'tfbjcc'@'localhost' (using password: NO) in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:52:12] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tfbjcc/public_html/foto/tags.php on line 27
+[13-Dec-2008 21:52:12] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:56:57] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:58:21] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 21:58:26] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/tfbjcc/public_html/foto/tags.php on line 28
+[13-Dec-2008 22:00:50] PHP Parse error:  syntax error, unexpected '?' in /home/tfbjcc/public_html/foto/index.php on line 79
+[13-Dec-2008 22:01:29] PHP Parse error:  syntax error, unexpected '?' in /home/tfbjcc/public_html/foto/index.php on line 83
+[13-Dec-2008 22:01:50] PHP Warning:  require_once(object.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/tfbjcc/public_html/foto/index.php on line 17
+[13-Dec-2008 22:01:50] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'object.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tfbjcc/public_html/foto/index.php on line 17
+[13-Dec-2008 23:33:49] PHP Fatal error:  Can't use function return value in write context in /home/tfbjcc/public_html/foto/picture.php on line 30
+[13-Dec-2008 23:39:20] PHP Fatal error:  Can't use function return value in write context in /home/tfbjcc/public_html/foto/picture.php on line 30
+[13-Dec-2008 23:39:21] PHP Fatal error:  Can't use function return value in write context in /home/tfbjcc/public_html/foto/picture.php on line 30
+[13-Dec-2008 23:40:37] PHP Parse error:  syntax error, unexpected T_IF in /home/tfbjcc/public_html/foto/picture.php on line 35
+[13-Dec-2008 23:41:28] PHP Parse error:  syntax error, unexpected '?' in /home/tfbjcc/public_html/foto/picture.php on line 96
+[14-Dec-2008 00:08:35] PHP Fatal error:  Class 'Object' not found in /home/tfbjcc/public_html/foto/dbs.php on line 3
+[14-Dec-2008 00:16:17] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:9) in /home/tfbjcc/public_html/foto/picture.php on line 51
+[14-Dec-2008 00:17:56] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:18:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:18:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:18:27] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:19:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:20:16] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:20:21] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:20:27] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:20:59] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:21:00] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/tfbjcc/public_html/foto/picture.php:3) in /home/tfbjcc/public_html/foto/picture.php on line 54
+[14-Dec-2008 00:26:56] PHP Fatal error:  Class 'Object' not found in /home/tfbjcc/public_html/foto/dbs.php on line 3
+[14-Dec-2008 00:58:16] PHP Fatal error:  Class 'DBS' not found in /home/tfbjcc/public_html/foto/tags.php on line 19
+[14-Dec-2008 00:59:47] PHP Fatal error:  Class 'Object' not found in /home/tfbjcc/public_html/foto/dbs.php on line 3
+[14-Dec-2008 01:09:24] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 38
+[14-Dec-2008 01:09:25] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 38
+[14-Dec-2008 01:11:04] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/tfbjcc/public_html/foto/tags.php on line 38
+[14-Dec-2008 04:41:51] PHP Warning:  require_once(./inc/html/foot.html) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/tfbjcc/public_html/foto/index.php on line 90
+[14-Dec-2008 04:41:51] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required './inc/html/foot.html' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tfbjcc/public_html/foto/index.php on line 90
+[14-Dec-2008 05:41:05] PHP Parse error:  syntax error, unexpected ',' in /home/tfbjcc/public_html/foto/index.php on line 30
+[14-Dec-2008 06:23:49] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 67
+[14-Dec-2008 06:25:44] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 67
+[14-Dec-2008 06:26:40] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 68
+[14-Dec-2008 06:26:43] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 68
+[14-Dec-2008 06:37:34] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 68
+[14-Dec-2008 07:20:48] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 68
+[14-Dec-2008 07:21:28] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 68
+[14-Dec-2008 07:21:39] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 68
+[14-Dec-2008 09:49:36] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/tfbjcc/public_html/foto/picture.php on line 82
