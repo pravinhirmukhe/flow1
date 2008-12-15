@@ -14,9 +14,9 @@
 <!-- /all in one seo pack -->  
 </head>
 <?php
-require_once 'object.php';
-require_once 'error.php';
-require_once 'dbs.php';
+require_once './inc/php/object.php';
+require_once './inc/php/error.php';
+require_once './inc/php/dbs.php';
 ini_set('display_errors',1);
 try{
 	$db = DBS::init();
@@ -26,11 +26,14 @@ try{
 	$pic  = "ft_ngg_pictures";
 	$tags = "ft_terms";
 	$p2t  = "ft_term_relationships";
+
+	//, $tags as tags, $p2t as p2t   nd pic.pid=p2t.object_id and p2t.term_taxonomy_id=tags.term_id
+	//	, tags.term_id as tid  tags.name as tag,
 	
 	$url="http://stat001.tfbj.cc/**/";
-	$sql="SELECT gry.path as path, tags.name as tag, pic.pid as id, pic.alttext as alt, pic.filename , tags.term_id as tid
-	      FROM  $glry as gry, $pic as pic, $tags as tags, $p2t as p2t 
-		  where pic.galleryid=gry.gid and pic.pid=p2t.object_id and p2t.term_taxonomy_id=tags.term_id
+	$sql="SELECT gry.path as path, pic.pid as id, pic.alttext as alt, pic.filename , count(*) as cnt
+	      FROM  $glry as gry, $pic as pic
+		  where pic.galleryid=gry.gid 
 		  order by pic.pid desc limit 1 ";
 	$rt=$db->query($sql);
 	if(!$rt){
@@ -44,12 +47,12 @@ try{
 			throw new error("error in dataset");
 			}
 	}
-	$tag=$obj->tag;
-	$tid = $obj->tid;
+	//$tag=$obj->tag;
+	//$tid = $obj->tid;
 	$start = strrpos($obj->path, '/');
 	$dir = substr($obj->path, $start+1);
 	$alt = $obj->alt;  
-	$next  = $obj->id-1;
+	$next  = $obj->cnt-1;
 	$cimg= str_replace('**', $dir, $url).$obj->filename;  # current imgae
 	$previmg= "picture.php?pid={$next}";			  # next image
 	$tagimg = "picture.php?tag={$tid}&num=1";	  # image of image 
@@ -86,7 +89,5 @@ try{
  <a href="" title="Comments "></a>     	 
 </div>   
 </div>
-    
-<div class="footer">
-© Copyright FOTO!  ·  All rights reserved  ·  
-</body></html>
+<?php
+require_once './inc/html/foot.html';?>
