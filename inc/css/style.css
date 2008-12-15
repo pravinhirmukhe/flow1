@@ -1,0 +1,8 @@
+body{text-align:center;color:#ccc}
+img{border:none 0}
+h1{font-family:"MS UI Gothic","Century gothic",serif;font-size:3em}
+a{text-decoration:none;color:#999}
+a:focus,a:hover,a:active { text-decoration:underline; }
+a:visited{ color:#666; }
+.nav li{display:inline}
+#foot{padding-top:10px;font-size:0.8em}

@@ -13,7 +13,8 @@
  *
  * @package WordPress
  */
-
+//历史版本
+define('WP_POST_REVISIONS', '0');
 // ** MySQL设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress数据库的名称 */
 define('DB_NAME', 'tfbjcc_foto');

@@ -116,4 +116,5 @@ try{
 
 </div>
 <?php
+//2743732654_bbd6afac42_o.jpg
 require_once './inc/html/foot.html';?>

@@ -1,18 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
-<title>FOTO</title>    
-
-<meta name="generator" content="flow 1.0">   
-<!-- leave this for stats -->      
-<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="black">  
-<link rel="shortcut icon" href="http://flow.tfbj.cc/favicon.ico" type="image/x-icon"> 
-<!-- all in one seo pack 1.4.6.15 [288,304] -->
-<meta name="description" content="To Be A Founder,Just follow it">
-<meta name="keywords" content="photo,graphic,shot,polaroid,camera,perfect,gorgeous,picture,nice">
-<!-- /all in one seo pack -->  
-</head>
 <?php
 require_once './inc/php/object.php';
 require_once './inc/php/error.php';
@@ -60,31 +45,13 @@ try{
 	echo $msg;
 	
 }
+require_once './inc/html/head.html';
 ?>
 
-<body>   
-<div class="container">  
-<h1>FOTO</h1> 
-
-<div class="nav">
-<a href="http://foto.tfbj.cc/about.htnl" title="about" >about</a> 
-<a href="http://foto.tfbj.cc/archive.php" title="archive">archive</a>  
-<a title="tags" href="http://foto.tfbj.cc/tags.php">tags</a>
-</div>   
- <!-- begin post -->    
-    
-
-<div class="entry">  
-
-<!-- echo the main pictures -->	
-<a href="<?php echo $previmg; ?>" title="Previous"><img class="alignnone" title="<?php echo $ititle; ?>" src="<?php echo $cimg; ?>" alt="<?php echo $alt; ?>"></a>
-
-<!-- echo the appending information -->
-<div class="posted">  
- <a href="<?php echo $previmg;?>">« Previous </a>
- <a href="<?php echo $tagimg; ?>" title="<?php echo $tag; ?>"> <?php echo $tag; ?></a> 
- <a href="" title="Comments "></a>     	 
-</div>   
+<div id='main'>
+  <p> <a href="<?php echo $previmg; ?>" title="Previous"> <img class="alignnone" title="<?php echo $ititle; ?>" src="<?php echo $cimg; ?>" alt="<?php echo $alt; ?>"> </a></p>
+  <p><a href="<?php echo $previmg;?>">« Previous</a> <a href="#">Next »</a></p>
+  <p>Tags:<a href="<?php echo $tagimg; ?>" title="<?php echo $tag; ?>"><?php echo $tag; ?></a></p>
 </div>
 <?php
 require_once './inc/html/foot.html';?>
