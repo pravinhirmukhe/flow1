@@ -1,9 +1,11 @@
 body{text-align:center;color:#ccc}
 img{border:none 0}
 h1{font-family:"MS UI Gothic","Century gothic",serif;font-size:3em}
+h1 a:hover{color:#fff}
 a{text-decoration:none;color:#999}
-a:focus,a:hover,a:active { text-decoration:underline; }
+a:hover{background:#ccc;color:#fff}
+a:focus,a:active { text-decoration:none; }
 a:visited{ color:#666; }
-.nav li{display:inline}
-#main{padding:0 0 10px}
+#nav li{display:inline}
+#main{padding:20px 0}
 #foot{padding-top:10px;font-size:0.8em}

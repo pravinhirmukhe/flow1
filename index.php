@@ -59,7 +59,7 @@ require_once './inc/html/head.html';
 
 <div id='main'>
   <p> <a href="<?php echo $previmg; ?>" title="Previous"> <img class="alignnone" title="<?php echo $ititle; ?>" src="<?php echo $cimg; ?>" alt="<?php echo $alt; ?>"> </a></p>
-  <p><a href="<?php echo $previmg;?>">« Previous</a> <a href="#">Next »</a></p>
+  <p><a href="<?php echo $previmg;?>">« Previous</a></p>
   <p>Tags:<a href="<?php echo $tagimg; ?>" title="<?php echo $tag; ?>"><?php echo $tag; ?></a></p>
 </div>
 <?php
