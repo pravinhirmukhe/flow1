@@ -13,10 +13,11 @@ try{
 	$p2t  = "ft_term_relationships";
 	
 	$url="http://stat001.tfbj.cc/**/";
-	$sql="SELECT gry.path as path, tags.name as tag, pic.pid as id, pic.alttext as alt, pic.filename , tags.term_id as tid
-	      FROM  $glry as gry, $pic as pic, $tags as tags, $p2t as p2t 
-		  where pic.galleryid=gry.gid and pic.pid=p2t.object_id and p2t.term_taxonomy_id=tags.term_id
-		  order by pic.pid desc limit 1 ";
+	$sql="SELECT gry.path as path, pic.pid as id, pic.alttext as alt, pic.filename 
+	      FROM  $glry as gry, $pic as pic
+		  where pic.galleryid=gry.gid 
+		  order by pic.pid desc
+		  limit 1  ";
 	$rt=$db->query($sql);
 	if(!$rt){
 		throw new error("error in query database");
