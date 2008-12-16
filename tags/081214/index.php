@@ -31,10 +31,11 @@ try{
 	//	, tags.term_id as tid  tags.name as tag,
 	
 	$url="http://stat001.tfbj.cc/**/";
-	$sql="SELECT gry.path as path, pic.pid as id, pic.alttext as alt, pic.filename , count(*) as cnt
+	$sql="SELECT gry.path as path, pic.pid as id, pic.alttext as alt, pic.filename 
 	      FROM  $glry as gry, $pic as pic
 		  where pic.galleryid=gry.gid 
-		  order by pic.pid desc limit 1 ";
+		  order by pic.pid desc
+		  limit 1  ";
 	$rt=$db->query($sql);
 	if(!$rt){
 		throw new error("error in query database");
