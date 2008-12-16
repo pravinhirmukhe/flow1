@@ -9,7 +9,7 @@
  
 </head><body>
 <div class="container">
-<h1><a href="http://foto.tfbg.net/">FOTO!</a></h1>
+<h1><a href="http://foto.tfbg.net/">FOTO</a></h1>
 <div class="nav">
 <a href="about.php" title="about">about</a> · <a title="tags" href="http://foto.iysh.net/tags">tags</a>
 </div>
@@ -40,7 +40,7 @@ $db = DBS::init();
             else break;
         }
         $tagColor=$colors[$colorkeys{($i+$j)/2}];
-        echo "<span style='font-size:{$tagSize}%;color:{$tagColor}'><a href='picture.php?tag={$id}&num=1'>{$tag}</a></span>&nbsp;&nbsp;";
+        echo "<span style='font-size:{$tagSize}%;color:{$tagColor}'><a href='picture.php?tag={$id}&num=1&name={$tag}'>{$tag}</a></span>&nbsp;&nbsp;";
     }
 //-------------------------函数结束
 
