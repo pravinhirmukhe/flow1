@@ -5,4 +5,5 @@ a{text-decoration:none;color:#999}
 a:focus,a:hover,a:active { text-decoration:underline; }
 a:visited{ color:#666; }
 .nav li{display:inline}
+#main{padding:0 0 10px}
 #foot{padding-top:10px;font-size:0.8em}
