@@ -1,22 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">  
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
-<title>tags | FOTO!</title>
-<meta name="generator" content="WordPress 2.6.5">
-<link rel="stylesheet" href="tags%20_%20FOTO%21_files/style.css" type="text/css" media="screen" title="black">  
-<meta name="generator" content="WordPress 2.6.5">
- 
-</head><body>
-<div class="container">
-<h1><a href="http://foto.tfbg.net/">FOTO</a></h1>
-<div class="nav">
-<a href="about.php" title="about">about</a> · <a title="tags" href="http://foto.iysh.net/tags">tags</a>
-</div>
-<div class="pages tagslist">
 <?php
 require_once './inc/php/object.php';
 require_once './inc/php/dbs.php';
+
+//页面title
+$title='Tags';
+require_once './inc/html/head.html'; ?>
+<div id='main'>
+<?php
 $db = DBS::init();
 //-------------------------字体大小函数
     function showTag($cur,$tag,$id){
