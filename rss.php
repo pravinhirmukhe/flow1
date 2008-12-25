@@ -3,7 +3,7 @@
 require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
 
-$fotos=nggdb::find_last_images(0,100);
+$fotos=nggdb::find_last_images(0,300);
 //var_dump($fotos);
 header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 ?>
@@ -19,10 +19,9 @@ header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 
 <channel>
 	<title><?php bloginfo_rss('name'); wp_title_rss(); ?></title>
-	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 	<link><?php bloginfo_rss('url') ?></link>
 	<description><?php bloginfo_rss("description") ?></description>
-	<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', $foto[0]->imagedate, false); ?></pubDate>	<generator>http://www.tfbj.cc/</generator>
+	<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', $fotos[0]->imagedate, false); ?></pubDate>	<generator>http://www.tfbj.cc/</generator>
 	<language><?php echo get_option('rss_language'); ?></language>
 	<sy:updatePeriod><?php echo apply_filters( 'rss_update_period', 'hourly' ); ?></sy:updatePeriod>
 	<sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', '1' ); ?></sy:updateFrequency>
@@ -35,9 +34,9 @@ header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 		<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', $foto->imagedate, false); ?></pubDate>
 		<dc:creator><?php echo $foto->title ?></dc:creator>
 		<guid isPermaLink="false"><?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?></guid>
-		<description><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->thumbURL); ?>"></a>"]]></description>
-		<content:encoded><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->thumbURL); ?>"></a>]]></content:encoded>
-		<enclosure url="<?php str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->imageURL); ?>" type="image/jpeg" />
+		<description><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>"]]></description>
+		<content:encoded><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>]]></content:encoded>
+		<enclosure url="<?php echo fotourl($foto->imageURL); ?>" type="image/jpeg" />
 	<?php do_action('rss2_item'); ?>
 	</item>
 	<?php } } ?>
