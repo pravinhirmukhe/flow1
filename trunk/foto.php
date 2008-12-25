@@ -4,12 +4,20 @@ require_once('./inc/php/cfg.php');
 
 if(!empty($_GET['pid'])){
 	$foto=nggdb::find_image($_GET['pid']);
+	if(empty($foto)){
+		$fotos=nggdb::get_random_images();
+		$foto=$fotos[0];
+	}
 	$tags=wp_get_object_terms($_GET['pid'],'ngg_tag');
 }else{
-	$fotos=nggdb::get_random_images();
-	$foto=$fotos[0];
-	$tags=wp_get_object_terms($foto->pid,'ngg_tag');
+	if($_SESSION['last_pid'] > 0 ){
+		$pid=mt_rand(1,$_SESSION['last_pid']);
+		header("Location: foto.php?pid=$pid");
+	}else{
+		header('Location: /');
 	}
+}
+
 $foto_url=str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->imageURL);
 
 //输出页头keywords
@@ -27,7 +35,8 @@ if(!empty($tags)){
 $description=empty($foto->$description)?$cfg['description']:$foto->$description;
 
 //输出$title
-$title=$foto->alttext.$cfg['sitetitle'];
+$page_title=empty($foto->alttext)?'FOTO':$foto->alttext;
+$title=$page_title.$cfg['sitetitle'];
 
 require_once './inc/html/head.html';
 ?>
@@ -39,7 +48,7 @@ require_once './inc/html/head.html';
   <a href="foto.php?pid=<?php echo $foto->pid - 1; ?>">« Previous</a> <a href="foto.php">Random</a> <a href="foto.php?pid=<?php echo $foto->pid + 1; ?>">Next »</a>
   <p>Tags:
   	<?php if (!empty($tags)) { foreach($tags as $tag){ ?>
-	    <a href="tags.php?tag=<?php echo $tag->term_id; ?>"><?php echo $tag->slug; ?></a>
+	    <a href="tag.php?tagid=<?php echo $tag->term_id; ?>&tag=<?php echo $tag->slug; ?>"><?php echo $tag->slug; ?></a>
 		<?php } } else{ echo 'none'; } ?>
   </p>
 	<div class="google">	<script type="text/javascript"><!--

@@ -1,5 +1,6 @@
 <?php
-$title='About';
+$page_title='FOTO';
+$title='About'.$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
 <div id='main'>

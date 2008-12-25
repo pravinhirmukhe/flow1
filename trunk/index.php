@@ -2,11 +2,18 @@
 //引入图片插件入口文件
 require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
+
 //获取最后一张图片
 $fotos=nggdb::find_last_images(0,1);
 $foto=$fotos[0];
+
+//在session里保存最后一个id
+if($_SESSION['last_pid'] <= 0 or $_SESSION['last_pid']!=$foto->pid){
+	$_SESSION['last_pid']=$foto->pid;
+}
 //获取图片tags
 $tags=wp_get_object_terms($foto->pid,'ngg_tag');
+
 //修改图片链接为分流网址
 $foto_url=str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->imageURL);
 
@@ -25,6 +32,7 @@ if(!empty($tags)){
 $description=empty($foto->$description)?$cfg['description']:$foto->$description;
 
 //输出$title
+$page_title='FOTO';
 $title='INDEX'.$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
@@ -33,7 +41,7 @@ require_once './inc/html/head.html';
   <p> <a href="foto.php" title="rand foto"> <img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"> </a></p>
   <p>Tags:
   	<?php if (!empty($tags)) { foreach($tags as $tag){ ?>
-	    <a href="tags.php?tag=<?php echo $tag->term_id; ?>"><?php echo $tag->slug; ?></a>
+	    <a href="tag.php?tagid=<?php echo $tag->term_id; ?>&tag=<?php echo $tag->slug; ?>"><?php echo $tag->slug; ?></a>
 		<?php } } else{ echo 'none'; } ?>
   </p>
 </div>
