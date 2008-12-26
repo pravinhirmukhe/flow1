@@ -8926,7 +8926,7 @@ msgstr "没有分类目录"
 #, php-format
 msgid "%s topic"
 msgid_plural "%s topics"
-msgstr[0] "%s个主题"
+msgstr[0] "%s posts"
 
 #: wp-includes/class-pop3.php:83
 msgid "No server specified"

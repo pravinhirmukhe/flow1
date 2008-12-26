@@ -41,9 +41,7 @@ $title=$page_title.$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
 <div id='main'>
-	<div class="google">
-
-</div>
+	</div>
   <p> <a href="foto.php" title="rand foto"> <img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"> </a></p>
   <a href="foto.php?pid=<?php echo $foto->pid - 1; ?>">« Previous</a> <a href="foto.php">Random</a> <a href="foto.php?pid=<?php echo $foto->pid + 1; ?>">Next »</a>
   <p>Tags:
@@ -51,7 +49,7 @@ require_once './inc/html/head.html';
 	    <a href="tag.php?tagid=<?php echo $tag->term_id; ?>&tag=<?php echo $tag->slug; ?>"><?php echo $tag->slug; ?></a>
 		<?php } } else{ echo 'none'; } ?>
   </p>
-	<div class="google">	<script type="text/javascript"><!--
+	<div class="google"><script type="text/javascript"><!--
 google_ad_client = "pub-6834157029902877";
 /* 728x90, 创建于 08-12-23 */
 google_ad_slot = "0543933874";

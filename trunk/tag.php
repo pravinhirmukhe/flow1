@@ -15,7 +15,10 @@ if(!empty($_GET['tagid'])){
 }else{
 	header('Location: tags.php');
 }
-
+//输出keywords
+$keywords=$_GET['tag'].','.$cfg['keywords'];
+//输出description
+$description=$cfg['description'];
 require_once './inc/html/head.html'; ?>
 <div id='main'>
 <?php foreach($fotos as $foto){ ?>
