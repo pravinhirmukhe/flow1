@@ -18,22 +18,14 @@ $tags=wp_get_object_terms($foto->pid,'ngg_tag');
 $foto_url=str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->imageURL);
 
 //输出页头keywords
-if(!empty($tags)){
-	$key_arr=array();
-	foreach($tags as $tag){
-		$key_arr[]=$tag->slug;
-		$keywords=implode(',',$key_arr);
-	}
-}else{
-	$keywords=$cfg['keywords'];
-}
+$keywords=$cfg['keywords'];
 
 //输出页面description
-$description=empty($foto->$description)?$cfg['description']:$foto->$description;
+$description=$cfg['description'];
 
 //输出$title
-$page_title='FOTO';
-$title='INDEX'.$cfg['sitetitle'];
+$page_title=$cfg['sitename'];
+$title=$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
 <div id='main'>
