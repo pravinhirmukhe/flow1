@@ -25,7 +25,7 @@ $description=$cfg['description'];
 
 //输出$title
 $page_title=$cfg['sitename'];
-$title=$cfg['sitetitle'];
+$title=$cfg['sitename'].$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
 <div id='main'>

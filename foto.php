@@ -4,7 +4,7 @@ require_once('./inc/php/cfg.php');
 
 if(!empty($_GET['pid'])){
 	$foto=nggdb::find_image($_GET['pid']);
-	if(empty($foto)){
+	if(empty($foto) or $foto->exclude == 1){
 		$fotos=nggdb::get_random_images();
 		$foto=$fotos[0];
 	}
@@ -49,6 +49,34 @@ require_once './inc/html/head.html';
 	    <a href="tag.php?tagid=<?php echo $tag->term_id; ?>&tag=<?php echo $tag->slug; ?>"><?php echo $tag->slug; ?></a>
 		<?php } } else{ echo 'none'; } ?>
   </p>
+  
+<div id='friend'><!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+
+<!-- Define the div tag where the gadget will be inserted. -->
+<div id="div-1230468400576" style="width:600px;border:1px solid #cccccc;"></div>
+<!-- Render the gadget into a div. -->
+<script type="text/javascript">
+var skin = {};
+skin['HEIGHT'] = '180';
+skin['BORDER_COLOR'] = '#cccccc';
+skin['ENDCAP_BG_COLOR'] = '#e6e6e6';
+skin['ENDCAP_TEXT_COLOR'] = '#333333';
+skin['ENDCAP_LINK_COLOR'] = '#666666';
+skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+skin['CONTENT_BG_COLOR'] = '#ffffff';
+skin['CONTENT_LINK_COLOR'] = '#0000cc';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderMembersGadget(
+ { id: 'div-1230468400576',
+   site: '10631887459699564576'},
+  skin);
+</script>
+</div>
 	<div class="google"><script type="text/javascript"><!--
 google_ad_client = "pub-6834157029902877";
 /* 728x90, 创建于 08-12-23 */

@@ -1,0 +1,11 @@
+#
+# robots.txt for FOTO
+# 
+
+User-agent: *
+
+Disallow: /wp-admin/
+Allow: /rss.php
+Allow: /foto.php
+Allow: /tags.php
+Allow: /tag.php

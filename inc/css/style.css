@@ -7,5 +7,7 @@ a:hover{background:#ccc;color:#fff}
 a:focus,a:active { text-decoration:none; }
 a:visited{ color:#666; }
 #nav li{display:inline}
-#main{padding:20px 0}
+#main{padding:20px 0;}
+#upload{position:absolute;top:2px;left:2px;}
 #foot{padding-top:10px;font-size:0.8em}
+#friend{width:600px;margin:0 auto !important;}
