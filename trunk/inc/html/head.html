@@ -6,17 +6,48 @@
 <meta name="description" content="<?php echo $description; ?>">
 <meta name="keywords" content="<?php echo $keywords; ?>">
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset/reset-min.css">
-<link rel="stylesheet" type="text/css" href="inc/css/style.css">
+<link rel="stylesheet" type="text/css" href="/inc/css/style.css">
 <link rel="alternate" type="application/rss+xml" title="FOTO my life" href="http://feedproxy.google.com/tfbj/foto" />
 </head>
 <body>
 <div id="nav">
   <h1><a href="/"><?php echo $page_title; ?></a></h1>
   <ul>
-    <li><a href="about.php" title="about">about</a></li>
+    <li><a href="/about.php" title="about">about</a></li>
 	<li>·</li>
-    <li><a title="tags" href="tags.php">tags</a></li>
+    <li><a title="tags" href="/tags.php">tags</a></li>
+	<li>·</li>
+    <li><a title="tags" href="/upload.php">upload</a></li>
+	<li>·</li>
+    <li><a title="tags" href="/search.php">search</a></li>
   </ul>
 </div>
-<div id='upload'><a href='upload.php'><img src='./wp-admin/images/media-button-image.gif' /> upload your foto</a></div>
+<div id='user-menu'>
+<!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
+
+<!-- Define the div tag where the gadget will be inserted. -->
+<div id="div-1230890328534" style="width:330px;border:1px solid #ffffff;"></div>
+<!-- Render the gadget into a div. -->
+<script type="text/javascript">
+var skin = {};
+skin['BORDER_COLOR'] = '#ffffff';
+skin['ENDCAP_BG_COLOR'] = '#ffffff';
+skin['ENDCAP_TEXT_COLOR'] = '#333333';
+skin['ENDCAP_LINK_COLOR'] = '#666666';
+skin['ALTERNATE_BG_COLOR'] = '#ffffff';
+skin['CONTENT_BG_COLOR'] = '#ffffff';
+skin['CONTENT_LINK_COLOR'] = '#666666';
+skin['CONTENT_TEXT_COLOR'] = '#333333';
+skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
+skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
+skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+skin['ALIGNMENT'] = 'right';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderSignInGadget(
+ { id: 'div-1230890328534',
+   site: '10631887459699564576'},
+  skin);
+</script>
+</div>
 <div class="ad"></div>

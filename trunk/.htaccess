@@ -1,1 +1,5 @@
 Options All -Indexes
+RewriteEngine  on
+RewriteBase    /
+RewriteRule foto/(\d+)-?(.*)\.html foto\.php\?pid=$1                [NC,L]
+RewriteRule tag/(\d+)-?(.*)\.html tag\.php\?tagid=$1&tag=$2    [NC,L]

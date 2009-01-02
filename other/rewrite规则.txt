@@ -1,0 +1,5 @@
+﻿原来	/foto.php?pid=123
+重写	/foto/123(-alttext).html
+
+原来	/tag.php?tagid=123&tag=tagslug
+重写	/tag/123(-tagslug).html	

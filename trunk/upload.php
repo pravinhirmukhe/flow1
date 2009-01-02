@@ -1,6 +1,7 @@
 <?php
 //引入图片插件入口文件
 require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
+require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
 
 /*
@@ -72,6 +73,7 @@ if($_SERVER ["REQUEST_METHOD"] == 'POST'){
 				$pid=nggdb::insert_image($gid, $filename, $title, $description, 1);
 				$tags = explode(",", $tags);
 				wp_set_object_terms($pid, $tags, 'ngg_tag');
+				$wpdb->query( "UPDATE $wpdb->nggpictures SET imagedate = now()  WHERE pid = $pid");
 				$display='block';
 				$errormsg='your upload is successful,it will be reviewed.you can continue';
 			}

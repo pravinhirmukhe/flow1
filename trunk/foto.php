@@ -12,7 +12,7 @@ if(!empty($_GET['pid'])){
 }else{
 	if($_SESSION['last_pid'] > 0 ){
 		$pid=mt_rand(1,$_SESSION['last_pid']);
-		header("Location: foto.php?pid=$pid");
+		header("Location: /foto/$pid.html");
 	}else{
 		header('Location: /');
 	}
@@ -42,11 +42,24 @@ require_once './inc/html/head.html';
 ?>
 <div id='main'>
 	</div>
-  <p> <a href="foto.php" title="rand foto"> <img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"> </a></p>
-  <a href="foto.php?pid=<?php echo $foto->pid - 1; ?>">« Previous</a> <a href="foto.php">Random</a> <a href="foto.php?pid=<?php echo $foto->pid + 1; ?>">Next »</a>
+  <p><img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"></p>
+  <a href="/foto/<?php echo $foto->pid - 1; ?>.html">« Previous</a> <a href="/foto.php">Random</a> <a href="/foto/<?php echo $foto->pid + 1; ?>.html">Next »</a>
+  <div class="google">
+    <script type="text/javascript"><!--
+	google_ad_client = "pub-6834157029902877";
+	/* 728x90, 创建于 08-12-23 */
+	google_ad_slot = "0543933874";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+  </div>
   <p>Tags:
   	<?php if (!empty($tags)) { foreach($tags as $tag){ ?>
-	    <a href="tag.php?tagid=<?php echo $tag->term_id; ?>&tag=<?php echo $tag->slug; ?>"><?php echo $tag->slug; ?></a>
+	    <a href="/tag/<?php echo $tag->term_id; ?>-<?php echo $tag->slug; ?>.html"><?php echo $tag->slug; ?></a>
 		<?php } } else{ echo 'none'; } ?>
   </p>
   
@@ -54,11 +67,10 @@ require_once './inc/html/head.html';
 <script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
 
 <!-- Define the div tag where the gadget will be inserted. -->
-<div id="div-1230468400576" style="width:600px;border:1px solid #cccccc;"></div>
+<div id="div-1230889880420" style="width:600px;border:1px solid #cccccc;"></div>
 <!-- Render the gadget into a div. -->
 <script type="text/javascript">
 var skin = {};
-skin['HEIGHT'] = '180';
 skin['BORDER_COLOR'] = '#cccccc';
 skin['ENDCAP_BG_COLOR'] = '#e6e6e6';
 skin['ENDCAP_TEXT_COLOR'] = '#333333';
@@ -70,24 +82,19 @@ skin['CONTENT_TEXT_COLOR'] = '#333333';
 skin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';
 skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';
 skin['CONTENT_HEADLINE_COLOR'] = '#333333';
+skin['DEFAULT_COMMENT_TEXT'] = 'RATE FOTO?';
+skin['HEADER_TEXT'] = 'Ratings';
+skin['POSTS_PER_PAGE'] = '5';
 google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
-google.friendconnect.container.renderMembersGadget(
- { id: 'div-1230468400576',
-   site: '10631887459699564576'},
+google.friendconnect.container.renderReviewGadget(
+ { id: 'div-1230889880420',
+   site: '10631887459699564576',
+   'view-params':{"disableMinMax":"false","scope":"PAGE","allowAnonymousPost":"true","startMaximized":"true"}
+},
   skin);
 </script>
 </div>
-	<div class="google"><script type="text/javascript"><!--
-google_ad_client = "pub-6834157029902877";
-/* 728x90, 创建于 08-12-23 */
-google_ad_slot = "0543933874";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+
 </div>
 <?php 
 require_once './inc/html/foot.html';?>

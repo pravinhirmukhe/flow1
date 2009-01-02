@@ -29,13 +29,13 @@ header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 	<?php if(!empty($fotos)){ foreach($fotos as $foto){ ?>
 	<item>
 		<title><?php echo $foto->alttext; ?></title>
-		<link><?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?></link>
-		<comments><?php comments_link(); ?></comments>
+		<link><?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?></link>
+		<comments><?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?></comments>
 		<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', $foto->imagedate, false); ?></pubDate>
 		<dc:creator><?php echo $foto->title ?></dc:creator>
-		<guid isPermaLink="false"><?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?></guid>
-		<description><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>"]]></description>
-		<content:encoded><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto.php?pid='.$foto->pid; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>]]></content:encoded>
+		<guid isPermaLink="false"><?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?></guid>
+		<description><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>"]]></description>
+		<content:encoded><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>]]></content:encoded>
 		<enclosure url="<?php echo fotourl($foto->imageURL); ?>" type="image/jpeg" />
 	<?php do_action('rss2_item'); ?>
 	</item>
