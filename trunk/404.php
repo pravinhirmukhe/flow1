@@ -2,21 +2,9 @@
 require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
 
-if(!empty($_GET['pid'])){
-	$foto=nggdb::find_image($_GET['pid']);
-	if(empty($foto) or $foto->exclude == 1){
-		$fotos=nggdb::get_random_images();
-		$foto=$fotos[0];
-	}
-	$tags=wp_get_object_terms($_GET['pid'],'ngg_tag');
-}else{
-	if($_SESSION['last_pid'] > 0 ){
-		$pid=mt_rand(1,$_SESSION['last_pid']);
-		header("Location: /foto/$pid.html");
-	}else{
-		header('Location: /');
-	}
-}
+$fotos=nggdb::get_random_images();
+$foto=$fotos[0];
+$tags=wp_get_object_terms($_GET['pid'],'ngg_tag');
 
 $foto_url=str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->imageURL);
 
@@ -35,13 +23,19 @@ if(!empty($tags)){
 $description=empty($foto->$description)?$cfg['description']:$foto->$description;
 
 //输出$title
-$page_title=empty($foto->alttext)?$cfg['sitename']:$foto->alttext;
+$page_title='HTTP 404 not found';
 $title=$page_title.$cfg['sitetitle'];
 
 require_once './inc/html/head.html';
 ?>
 
 <div id='main'>
+<script type="text/javascript">
+  var GOOG_FIXURL_LANG = 'en';
+  var GOOG_FIXURL_SITE = 'http://foto.tfbj.cc/';
+</script>
+<script type="text/javascript" 
+    src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
   <p><img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"></p>
   <a href="/foto/<?php echo $foto->pid - 1; ?>.html">« Previous</a> <a href="/foto.php">Random</a> <a href="/foto/<?php echo $foto->pid + 1; ?>.html">Next »</a>
   <div class="google">
