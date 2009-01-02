@@ -30,10 +30,10 @@ require_once './inc/html/head.html';
 ?>
 <div id='main'>
   <p><?php echo $foto->imagedate; ?></p>
-  <p> <a href="foto.php" title="rand foto"> <img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"> </a></p>
+  <p><a href="/foto.php" title="rand foto"><img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"></a></p>
   <p>Tags:
   	<?php if (!empty($tags)) { foreach($tags as $tag){ ?>
-	    <a href="tag.php?tagid=<?php echo $tag->term_id; ?>&tag=<?php echo $tag->slug; ?>"><?php echo $tag->slug; ?></a>
+	    <a href="tag/<?php echo $tag->term_id.'-'.$tag->slug; ?>.html"><?php echo $tag->slug; ?></a>
 		<?php } } else{ echo 'none'; } ?>
   </p>
 </div>

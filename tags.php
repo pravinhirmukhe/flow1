@@ -4,7 +4,7 @@ require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
 $tags=get_terms('ngg_tag');
 foreach($tags as $tag){
-	$tag->link = $cfg['siteurl'].'tag.php?tag='.$tag->slug.'&tagid='.$tag->term_id;
+	$tag->link = $cfg['siteurl'].'tag/'.$tag->term_id.'-'.$tag->slug.'.html';
 }
 $args=array(
 	'smallest' => 8, 'largest' => 100, 'unit' => 'pt', 'number' => 100,

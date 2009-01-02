@@ -10,7 +10,7 @@ if(!empty($_GET['tagid'])){
 		header('Location: tags.php');
 	}
 	//页面title
-	$page_title=$_GET['tag'];
+	$page_title=empty($_GET['tag'])?$cfg['sitename']:$_GET['tag'];
 	$title=$page_title.$cfg['sitetitle'];
 }else{
 	header('Location: tags.php');
@@ -22,7 +22,7 @@ $description=$cfg['description'];
 require_once './inc/html/head.html'; ?>
 <div id='main'>
 <?php foreach($fotos as $foto){ ?>
-	<a href="foto.php?pid=<?php echo $foto->pid; ?>"><img src="<?php echo fotourl($foto->thumbURL); ?>" alt="<?php echo fotourl($foto->alttext); ?>" /></a>
+	<a href="foto/<?php echo $foto->pid; ?>.html"><img src="<?php echo fotourl($foto->thumbURL); ?>" alt="<?php echo fotourl($foto->alttext); ?>" /></a>
 <?php } ?>
 </div>
 <?php
