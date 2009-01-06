@@ -31,8 +31,12 @@ if(!empty($tags)){
 	$keywords=$cfg['keywords'];
 }
 
+//输出keywords
+$keywords=$foto->name.','.$keywords;
+
 //输出页面description
-$description=empty($foto->$description)?$cfg['description']:$foto->$description;
+$description=empty($foto->description)?$cfg['description']:$foto->description;
+
 
 //输出$title
 $page_title=empty($foto->alttext)?$cfg['sitename']:$foto->alttext;

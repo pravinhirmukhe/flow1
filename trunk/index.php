@@ -19,6 +19,7 @@ $foto_url=str_replace($cfg['trueurl'],$cfg['baseurl'],$foto->imageURL);
 
 //输出页头keywords
 $keywords=$cfg['keywords'];
+$keywords=$foto->name.','.$keywords;
 
 //输出页面description
 $description=$cfg['description'];
