@@ -22,7 +22,7 @@ $keywords=$cfg['keywords'];
 $keywords=$foto->name.','.$keywords;
 
 //输出页面description
-$description=$cfg['description'];
+$description='colorful world,young body,pure desire,real dream,crazy movement.'.$cfg['description'];
 
 //输出$title
 $page_title=$cfg['sitename'];

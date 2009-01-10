@@ -5,6 +5,19 @@ require_once('./inc/php/cfg.php');
 
 $fotos=nggdb::find_last_images(0,300);
 //var_dump($fotos);
+
+//取图片tags
+$foto_ids=array();
+foreach($fotos as $foto){
+	$foto_ids[]=$foto->pid;
+}
+$args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'all_with_object_id');
+$tags=wp_get_object_terms($foto_ids,'ngg_tag',$args);
+$tags_arr=array();
+foreach($tags as $tag){
+	$tags_arr[$tag->object_id][]=array('term_id'=>$tag->term_id,'name'=>$tag->name,'slug'=>$tag->slug);
+}
+
 header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 ?>
 <?php echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
@@ -35,7 +48,26 @@ header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 		<dc:creator><?php echo $foto->title ?></dc:creator>
 		<guid isPermaLink="false"><?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?></guid>
 		<description><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>"]]></description>
-		<content:encoded><![CDATA[<a href="<?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>]]></content:encoded>
+
+		<content:encoded>
+		<![CDATA[
+
+		<a href="<?php echo $cfg['siteurl'].'foto/'.$foto->pid.'.html'; ?>"><img border="0" alt="<?php echo $foto->alttext; ?>" src="<?php echo fotourl($foto->thumbURL); ?>"></a>
+
+		<br /><br />
+
+		<?php echo $foto->description; ?>
+
+		<br /><br />
+
+		tags:<?php foreach($tags_arr[$foto->pid] as $foto_tag){ ?>
+
+		<a href="<?php echo $cfg['siteurl'].'tag/'.$foto_tag['term_id'].'-'.$foto_tag['slug'].'.html' ?>"><?php echo $foto_tag['name']; ?></a>&nbsp;
+
+		<?php } ?>
+
+		]]>
+		</content:encoded>
 		<enclosure url="<?php echo fotourl($foto->imageURL); ?>" type="image/jpeg" />
 	<?php do_action('rss2_item'); ?>
 	</item>
