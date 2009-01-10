@@ -1,4 +1,8 @@
 <?php
+//引入图片插件入口文件
+require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
+require_once('./inc/php/cfg.php');
+
 $page_title='FOTO';
 $title='Search'.$cfg['sitetitle'];
 require_once './inc/html/head.html';
