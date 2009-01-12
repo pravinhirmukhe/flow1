@@ -3,21 +3,26 @@
 require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
 
-$fotos=nggdb::find_last_images(0,300);
-//var_dump($fotos);
+$fotos=nggdb::find_last_images(0,10000);
 
-//取图片tags
-$foto_ids=array();
 foreach($fotos as $foto){
-	$foto_ids[]=$foto->pid;
+	echo '<url>';
+	echo '<loc>'.$cfg['siteurl'].'foto/'.$foto->pid.'.html</loc>';
+	if(!empty($foto->imagedate)){
+		echo '<lastmod>'.substr($foto->imagedate,0,10).'</lastmod>';
+	}
+	echo '<changefreq>daily</changefreq>';
+	echo '</url>';
 }
-$args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'all_with_object_id');
-$tags=wp_get_object_terms($foto_ids,'ngg_tag',$args);
-$tags_arr=array();
-foreach($tags as $tag){
-	$tags_arr[$tag->object_id][]=array('term_id'=>$tag->term_id,'name'=>$tag->name,'slug'=>$tag->slug);
-}
-
+die();
+/*
+   <url>
+      <loc>http://www.example.com/</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+*/
 header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 ?>
 <?php echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>

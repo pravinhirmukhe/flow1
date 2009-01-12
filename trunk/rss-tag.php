@@ -17,7 +17,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.">\n";
 <?php if(!empty($tags)){ foreach($tags as $tag){ ?>
 	<url>
 		<loc><?php echo $cfg['siteurl'].'tag/'.$tag->term_id.'-'.$tag->slug.'.html'; ?></loc>
-		<changefreq>daily</changefreq>
+		<changefreq>always</changefreq>
 		<priority><?php echo abs(round( ( ($tag->count - 1) / $tag->count) - 0.1,1)) ; ?></priority>
 	</url> 
 <?php } } ?>
