@@ -1,7 +1,7 @@
 <?php
 //引入图片插件入口文件
-require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
-require_once('./inc/php/cfg.php');
+require_once('../wp-content/plugins/nextgen-gallery/ngg-config.php');
+require_once('../inc/php/cfg.php');
 
 $fotos=nggdb::find_last_images(0,10000);
 
@@ -12,6 +12,13 @@ foreach($fotos as $foto){
 		echo '<lastmod>'.substr($foto->imagedate,0,10).'</lastmod>';
 	}
 	echo '<changefreq>daily</changefreq>';
+	echo '<priority>';
+	if(empty($foto->description)){
+		echo '0.4';
+	}else{
+		echo '0.5';
+	}
+	echo '</priority>';
 	echo '</url>';
 }
 die();
