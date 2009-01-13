@@ -46,10 +46,10 @@ require_once './inc/html/head.html';
 ?>
 
 <div id='main'>
-  <p><img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>"></p>
+  <p><img title="<?php echo $foto->alttext; ?>" src="<?php echo $foto_url; ?>" alt="<?php echo $foto->alttext; ?>" /></p>
   <a href="/foto/<?php echo $foto->pid - 1; ?>.html">« Previous</a> <a href="/foto.php">Random</a> <a href="/foto/<?php echo $foto->pid + 1; ?>.html">Next »</a>
   <div class="google">
-		<script type="text/javascript"><!--
+    <script type="text/javascript"><!--
 		google_ad_client = "pub-6834157029902877";
 		/* 728x90, 创建于 09-1-6 */
 		google_ad_slot = "6778785642";
@@ -57,7 +57,7 @@ require_once './inc/html/head.html';
 		google_ad_height = 90;
 		//-->
 		</script>
-		<script type="text/javascript"
+    <script type="text/javascript"
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
   </div>
