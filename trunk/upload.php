@@ -91,95 +91,18 @@ $page_title=$cfg['sitename'];
 $title='Upload'.$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
-<style media="screen" type="text/css">
-.upload{
-	width:600px;
-	margin:0 auto;
-	text-align:left;
-}
-.button-primary {
-	font-family: "Lucida Grande", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
-	text-decoration: none;
-	font-size: 11px !important;
-	line-height: 16px;
-	padding: 2px 8px;
-	cursor: pointer;
-	border-width: 1px;
-	border-style: solid;
-	-moz-border-radius: 11px;
-	-khtml-border-radius: 11px;
-	-webkit-border-radius: 11px;
-	border-radius: 11px;
-background:#21759B url(./wp-admin/images/button-grad.png) repeat-x scroll left top;
-border-color:#298CBA !important;
-color:#FFFFFF !important;
-font-weight:bold;
-}
-.button-primary:hover{
-	border-color: #13455b !important;
-	color: #EAF2FA !important;
-}
-.button-primary:active {
-background:#21759B url(./wp-admin/images/button-grad-active.png) repeat-x scroll left top;
-border-color:#13455B;
-color:#000000;
-}
-textarea, input, select {
--x-system-font:none;
-font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
-font-size:13px;
-font-size-adjust:none;
-font-stretch:normal;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-line-height:19px;
-margin:1px;}
-input[type="file"], input[type="text"], textarea{border-color:#DFDFDF;-moz-border-radius-bottomleft:6px;
--moz-border-radius-bottomright:6px;
--moz-border-radius-topleft:6px;
--moz-border-radius-topright:6px;
-border-style:solid;
-border-width:1px;
-font-size:1.7em;
-outline-color:-moz-use-text-color;
-outline-style:none;
-outline-width:medium;
-padding:5px}
-textarea{width:100%}
-h2{text-align:center; font-weight:bold; font-size:18px}
-.errormsg{
-	background-color:#FFFBCC;
-	border-color:#E6DB55;
-	padding:5px;
-	-moz-border-radius-bottomleft:3px;
-	-moz-border-radius-bottomright:3px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-topright:3px;
-	border-style:solid;
-border-width:1px;
-	color:#333333;
-	font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
-font-size:13px;
-font-size-adjust:none;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-line-height:normal;
-	}
-</style>
 <div id='main' class='upload'>
 <h2>Upload</h2>
 <div class='errormsg' style="display:<?php echo $display; ?>"><p><?php echo $errormsg; ?></p></div>
-	<form name="foto" method="POST" enctype="multipart/form-data" action="" accept-charset="utf-8" >
-		<p>choose your foto(<STRONG>The limit your upload is 1M Byte</STRONG>):</p>
+	<form name="foto" method="post" enctype="multipart/form-data" action="" accept-charset="utf-8" >
+		<p>choose your foto(<strong>The limit your upload is 1M Byte</strong>):</p>
 		<p><input type="file" name="image" /></p>
 		<p>title:</p>
 		<p><input type="text" value="" name="title"/></p>
 		<p>tags(comma separated list): (example: tag1,tag2,tag3)</p>
 		<p><input type="text" value="" name="tags"/></p>
 		<p>description:</p>
-		<p><textarea tabindex="8" rows="3" name="description"></textarea></p>
+		<p><textarea tabindex="8" rows="3" cols="20" name="description"></textarea></p>
 		<p><input class="button-primary" type="submit" name="upload" value="upload foto" /></p>
 	</form>
 </div>

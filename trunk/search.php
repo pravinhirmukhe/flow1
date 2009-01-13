@@ -1,9 +1,6 @@
 <?php
 //引入图片插件入口文件
-require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
-
-$page_title='FOTO';
 $title='Search'.$cfg['sitetitle'];
 require_once './inc/html/head.html';
 ?>
@@ -30,7 +27,7 @@ require_once './inc/html/head.html';
 <input type="radio" name="sitesearch" value="" id="ss0"></input>
 <label for="ss0" title="Search the Web"><font size="-1" color="#000000">Web </font></label></td>
 <td>
-<input type="radio" name="sitesearch" value="foto.tfbj.cc" checked id="ss1"></input>
+<input type="radio" name="sitesearch" value="foto.tfbj.cc" checked="checked" id="ss1"></input>
 <label for="ss1" title="Search foto.tfbj.cc"><font size="-1" color="#000000">foto.tfbj.cc</font></label></td>
 </tr>
 </table>

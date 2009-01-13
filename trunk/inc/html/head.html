@@ -1,3 +1,8 @@
+<?php
+$page_title = isset($page_title)?$page_title:$cfg['sitename'];
+$description = isset($description)?$description:$cfg['description'];
+$keywords = isset($keywords)?$keywords:$cfg['keywords'];
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -8,6 +13,11 @@
 <meta name="keywords" content="<?php echo $keywords; ?>" />
 <link rel="shortcut icon" href="/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="/inc/css/style.css" />
+<?php 
+if(stripos($_SERVER["HTTP_USER_AGENT"],"Firefox")){
+echo "<link rel='stylesheet' type='text/css' href='/inc/css/ff.css' />";
+}
+?>
 <link rel="alternate" type="application/rss+xml" title="FOTO my life" href="http://feedproxy.google.com/tfbj/foto" />
 </head>
 <body>

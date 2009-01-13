@@ -14,3 +14,64 @@ a:visited{ color:#666; }
 #user-menu{position:absolute;top:2px;right:2px;}
 #foot{padding-top:10px;font-size:0.8em}
 #friend{width:600px;margin:0 auto !important;}
+
+/*upload*/
+.upload{
+	width:600px;
+	margin:0 auto;
+	text-align:left;
+}
+.button-primary {
+	font-family: "Lucida Grande", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+	text-decoration: none;
+	font-size: 11px !important;
+	line-height: 16px;
+	padding: 2px 8px;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+background:#21759B url(/wp-admin/images/button-grad.png) repeat-x scroll left top;
+border-color:#298CBA !important;
+color:#FFFFFF !important;
+font-weight:bold;
+}
+.button-primary:hover{
+	border-color: #13455b !important;
+	color: #EAF2FA !important;
+}
+.button-primary:active {
+background:#21759B url(/wp-admin/images/button-grad-active.png) repeat-x scroll left top;
+border-color:#13455B;
+color:#000000;
+}
+textarea, input, select {
+font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+font-size:13px;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:19px;
+margin:1px;}
+input[type="file"], input[type="text"], textarea{border-color:#DFDFDF;
+border-style:solid;
+border-width:1px;
+font-size:1.7em;
+outline-style:none;
+outline-width:medium;
+padding:5px}
+textarea{width:100%}
+h2{text-align:center; font-weight:bold; font-size:18px}
+.errormsg{
+	background-color:#FFFBCC;
+	border-color:#E6DB55;
+	padding:5px;
+	border-style:solid;
+border-width:1px;
+	color:#333333;
+	font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+font-size:13px;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+	}
