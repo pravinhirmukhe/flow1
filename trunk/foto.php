@@ -66,6 +66,8 @@ require_once './inc/html/head.html';
     <a href="/tag/<?php echo $tag->term_id; ?>-<?php echo $tag->slug; ?>.html"><?php echo $tag->slug; ?></a>
     <?php } } else{ echo 'none'; } ?>
   </p>
+  <p><br /></p>
+  <p><?php echo $foto->description; ?></p>
   <div id='friend'>
     <!-- Include the Google Friend Connect javascript library. -->
     <script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>

@@ -14,7 +14,7 @@ $keywords = isset($keywords)?$keywords:$cfg['keywords'];
 <link rel="shortcut icon" href="/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="/inc/css/style.css" />
 <?php 
-if(stripos($_SERVER["HTTP_USER_AGENT"],"Firefox")){
+if(stripos($_SERVER["HTTP_USER_AGENT"],"Firefox") or stripos($_SERVER["HTTP_USER_AGENT"],"Chrome")){
 echo "<link rel='stylesheet' type='text/css' href='/inc/css/ff.css' />";
 }
 ?>

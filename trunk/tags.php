@@ -7,7 +7,7 @@ foreach($tags as $tag){
 	$tag->link = $cfg['siteurl'].'tag/'.$tag->term_id.'-'.$tag->slug.'.html';
 }
 $args=array(
-	'smallest' => 8, 'largest' => 100, 'unit' => 'pt', 'number' => 100,
+	'smallest' => 20, 'largest' => 100, 'unit' => 'pt', 'number' => 100,
 	'format' => 'flat', 'orderby' => 'count', 'order' => 'RAND'
 	);
 $tags_display=wp_generate_tag_cloud($tags,$args);

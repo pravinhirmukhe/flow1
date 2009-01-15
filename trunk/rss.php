@@ -3,7 +3,7 @@
 require_once('./wp-content/plugins/nextgen-gallery/ngg-config.php');
 require_once('./inc/php/cfg.php');
 
-$fotos=nggdb::find_last_images(0,300);
+$fotos=nggdb::find_last_images(0,50);
 //var_dump($fotos);
 
 //取图片tags
