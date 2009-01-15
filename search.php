@@ -15,8 +15,8 @@ require_once './inc/html/head.html';
 <input type="hidden" name="domains" value="foto.tfbj.cc"></input>
 <label for="sbi" style="display: none">Enter your search terms</label>
 <input type="text" name="q" size="50" maxlength="255" value="" id="sbi"></input>
-<label for="sbb" style="display: none">Submit search form</label>
-<input type="submit" name="sa" value="Google Search" id="sbb"></input>
+<label for="sbb" style="display: none">Submit search form</label><br /><br />
+<input type="submit" name="sa" value="Google Search" id="sbb"></input><br /><br />
 </td></tr>
 <tr>
 <td>&nbsp;</td>
