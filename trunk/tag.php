@@ -5,6 +5,8 @@ require_once('./inc/php/cfg.php');
 
 if(!empty($_GET['tagid'])){
 	$pids=get_objects_in_term($_GET['tagid'],'ngg_tag');
+	$tag=get_term($_GET['tagid'],'ngg_tag');
+	//var_dump($tag);
 	$fotos=nggdb::find_images_in_list($pids,false,'DESC');
 	if(empty($fotos)){
 		header('Location: /tags.php');
@@ -19,6 +21,8 @@ if(!empty($_GET['tagid'])){
 $keywords=$_GET['tag'].','.$cfg['keywords'];
 //输出description
 $description=$cfg['description'];
+//输出canonical
+$canonical = canonical($tag->term_id,$tag->slug);
 require_once './inc/html/head.html'; ?>
 <div id='main'>
 <?php foreach($fotos as $foto){ ?>

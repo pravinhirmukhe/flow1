@@ -38,9 +38,10 @@ $keywords=$foto->name.','.$keywords;
 $description=empty($foto->description)?$cfg['description']:$foto->description;
 
 
-//输出$title
+//输出$title,$canonical
 $page_title=empty($foto->alttext)?$cfg['sitename']:$foto->alttext;
 $title=$page_title.$cfg['sitetitle'];
+$canonical = canonical($foto->pid);
 
 require_once './inc/html/head.html';
 ?>
